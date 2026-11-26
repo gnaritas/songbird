@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /thanks
+Disallow: /404
+Sitemap: https://songbird-demo.up.railway.app/sitemap.xml

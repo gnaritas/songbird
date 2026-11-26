@@ -1,0 +1,9 @@
+{
+  "name": "songbird-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Songbird — daylight-to-dusk bar at East End Market, Raleigh NC. Template v2 multi-page build (2026-11-26, t_fbffb777).",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
