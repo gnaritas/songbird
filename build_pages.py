@@ -78,6 +78,8 @@ section.block{padding:62px 0}
 .band-evening .card p{color:rgba(250,243,230,.72)}
 .bandnote{margin-top:26px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;color:var(--mut);font-size:15.5px}
 .bandnote strong{color:inherit}
+.band-evening .bandnote{color:rgba(250,243,230,.84)}
+.band-evening .bandnote strong{color:var(--cream)}
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
 .infocard{background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px}
 .band-evening .infocard{background:rgba(250,243,230,.06);border-color:var(--lineD)}
@@ -117,10 +119,10 @@ details.faq p{margin:10px 0 2px;color:var(--mut);font-size:15.5px;max-width:64ch
 .hintline{font-size:13.5px;color:var(--mut)}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .grid-2x2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.tile{display:block;background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px;text-decoration:none;color:inherit;transition:transform .12s,border-color .12s}
+.tile{display:flex;flex-direction:column;background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px;text-decoration:none;color:inherit;transition:transform .12s,border-color .12s}
 .tile:hover{border-color:var(--coral);transform:translateY(-2px);color:inherit}
 .tile h3{font-size:24px;margin-bottom:8px}.tile p{color:var(--mut);margin:0;font-size:15.5px}
-.tile .go{display:inline-block;margin-top:14px;font-weight:650;color:var(--coral);font-size:14.5px}
+.tile .go{display:inline-block;margin-top:auto;padding-top:16px;font-weight:650;color:var(--coral);font-size:14.5px}
 .footline{background:var(--night);color:rgba(250,243,230,.78);padding:52px 0 0}
 .footline a{color:rgba(250,243,230,.78);text-decoration:none}.footline a:hover{color:var(--sun)}
 .footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px;padding-bottom:40px}
@@ -306,7 +308,7 @@ HERO_ART = (
 MAP_IFRAME = ('<div class="mapframe"><iframe '
               'src="' + MAP_EMBED + '" '
               'title="Map to Songbird at 1020 East Whitaker Mill Road, Raleigh" '
-              'loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>')
+              'referrerpolicy="no-referrer-when-downgrade"></iframe></div>')
 
 HOURS_TABLE = ('<table class="hours"><thead><tr><th>Program</th><th>Days</th><th>Time</th></tr></thead><tbody>'
                '<tr><td>Mornings — coffee, juice, tea, morning plates</td><td>Every day</td><td>8 AM–2 PM</td></tr>'
@@ -544,14 +546,16 @@ def page_visit():
             '<p style="color:var(--mut);max-width:60ch">Mornings: no reservation needed — walk in or '
             'use the walk-up window. Evenings: tables open on <a href="' + RESY_URL + '">Resy</a>, and '
             'booking ahead is the surest way to get a seat for dinner.</p>',
-            '<h3>Good to know</h3>',
-            "\n".join(faq_html),
             '</div><div>',
             '<address class="addrline"><strong>Songbird</strong><br>' + ADDR + '<br>Inside East End Market, between Wake Forest Road and Atlantic Avenue<br>' + CITY + '</address>',
             MAP_IFRAME,
             '<div class="cta-row" style="margin-top:16px"><a class="btn p" href="' + RESY_URL + '">Book an evening table</a>'
             '<a class="btn g" href="/contact">Send us a note</a></div>',
             '</div></div></div></section>',
+            '<section class="block" style="padding-top:10px"><div class="wrap">',
+            '<h2>Good to know</h2>',
+            "\n".join(faq_html),
+            '</div></section>',
             '<section class="block band-evening"><div class="wrap"><div class="split">',
             '<div><p class="kicker">The people</p><h2>Who runs the room</h2>'
             '<p class="mut">Songbird is run by Meg Paradise and Charlie Blue Arm, with kitchen programs '

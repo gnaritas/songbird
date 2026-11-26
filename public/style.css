@@ -53,6 +53,8 @@ section.block{padding:62px 0}
 .band-evening .card p{color:rgba(250,243,230,.72)}
 .bandnote{margin-top:26px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;color:var(--mut);font-size:15.5px}
 .bandnote strong{color:inherit}
+.band-evening .bandnote{color:rgba(250,243,230,.84)}
+.band-evening .bandnote strong{color:var(--cream)}
 .split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
 .infocard{background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px}
 .band-evening .infocard{background:rgba(250,243,230,.06);border-color:var(--lineD)}
@@ -92,10 +94,10 @@ details.faq p{margin:10px 0 2px;color:var(--mut);font-size:15.5px;max-width:64ch
 .hintline{font-size:13.5px;color:var(--mut)}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .grid-2x2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.tile{display:block;background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px;text-decoration:none;color:inherit;transition:transform .12s,border-color .12s}
+.tile{display:flex;flex-direction:column;background:var(--paper2);border:1px solid var(--line);border-radius:18px;padding:26px;text-decoration:none;color:inherit;transition:transform .12s,border-color .12s}
 .tile:hover{border-color:var(--coral);transform:translateY(-2px);color:inherit}
 .tile h3{font-size:24px;margin-bottom:8px}.tile p{color:var(--mut);margin:0;font-size:15.5px}
-.tile .go{display:inline-block;margin-top:14px;font-weight:650;color:var(--coral);font-size:14.5px}
+.tile .go{display:inline-block;margin-top:auto;padding-top:16px;font-weight:650;color:var(--coral);font-size:14.5px}
 .footline{background:var(--night);color:rgba(250,243,230,.78);padding:52px 0 0}
 .footline a{color:rgba(250,243,230,.78);text-decoration:none}.footline a:hover{color:var(--sun)}
 .footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px;padding-bottom:40px}
